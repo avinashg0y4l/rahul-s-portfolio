@@ -17,16 +17,16 @@ export default function Hero() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <div className="relative z-10 container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         
         {/* Left: Intro Text */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="space-y-4 text-center md:text-left"
+          className="space-y-4 text-center md:text-left md:pl-16"
         >
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Hi, I’m <span className="text-yellow-300">Rahul</span>
           </h1>
           <p className="text-lg md:text-xl max-w-md">
@@ -47,7 +47,7 @@ export default function Hero() {
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="flex justify-center md:justify-end"
+          className="flex justify-center md:justify-end md:pr-16"
         >
           <div className="w-72 h-72 md:w-96 md:h-96 bg-white overflow-hidden rounded-full shadow-2xl border-4 border-yellow-300 relative">
             <img
