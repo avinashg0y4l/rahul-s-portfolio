@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import profile from "../assets/profile.jpg";
@@ -8,116 +7,98 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 flex justify-center"
+      className="relative w-full bg-gradient-to-br from-yellow-50 to-purple-50 py-20 overflow-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="w-full max-w-6xl bg-white/80 backdrop-blur-lg shadow-2xl rounded-3xl overflow-hidden grid md:grid-cols-2"
-      >
+      {/* Decorative Gradient Blobs */}
+      <div className="absolute top-10 -right-10 w-72 h-72 bg-yellow-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+      <div className="absolute bottom-10 -left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+
+      <div className="relative max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16">
+        
         {/* Left: Contact Form */}
-        <div className="p-8 md:p-12">
-          <h2 className="text-3xl font-extrabold mb-6 text-gray-900">
-            Get in <span className="text-blue-600">Touch</span>
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full md:w-1/2 bg-white shadow-xl rounded-2xl p-8"
+        >
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
+            Get in <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
-            Have any questions or feedback? Drop a message below 👇  
-            We’ll respond within 24 hours.
+            Have questions or ideas? Let’s connect! Drop a message and I’ll respond within 24 hours.
           </p>
-
-          <form className="flex flex-col gap-5">
-            <div className="flex flex-col md:flex-row gap-4">
+          <form className="flex flex-col gap-4">
+            <div className="flex gap-4">
               <input
                 type="text"
                 placeholder="First name"
-                className="p-3 border rounded-xl flex-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                className="p-3 border rounded-lg flex-1 focus:outline-none focus:ring-2 focus:ring-purple-400"
                 required
               />
               <input
                 type="text"
                 placeholder="Last name"
-                className="p-3 border rounded-xl flex-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                className="p-3 border rounded-lg flex-1 focus:outline-none focus:ring-2 focus:ring-purple-400"
                 required
               />
             </div>
             <input
               type="email"
               placeholder="yourname@company.com"
-              className="p-3 border rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-              required
-            />
-            <input
-              type="tel"
-              placeholder="+1 (555) 444-0000"
-              className="p-3 border rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
               required
             />
             <textarea
               placeholder="Type your message..."
               rows="4"
-              className="p-3 border rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
               required
             ></textarea>
-
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:bg-blue-500 transition"
+              className="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-300 transition"
             >
-              Send Message 🚀
+              Send Message
             </motion.button>
           </form>
-        </div>
-
-        {/* Right: Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-blue-100 to-purple-100 p-10 flex flex-col justify-center items-center relative"
-        >
-          {/* Profile Image with Glow */}
-          <div className="relative mb-8">
-            <div className="absolute inset-0 rounded-full bg-blue-400 blur-3xl opacity-40 animate-pulse"></div>
-            <img
-              src={profile}
-              alt="Contact Person"
-              className="relative w-40 h-40 rounded-full object-cover shadow-lg border-4 border-white"
-            />
-          </div>
-
-          {/* Info Cards */}
-          <div className="space-y-4 w-full">
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              className="flex items-center gap-4 bg-gray-900 text-white p-4 rounded-xl shadow-md"
-            >
-              <Mail className="w-6 h-6 text-blue-400" />
-              <span>Email: techsupport@yourmail.com</span>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              className="flex items-center gap-4 bg-gray-900 text-white p-4 rounded-xl shadow-md"
-            >
-              <Phone className="w-6 h-6 text-green-400" />
-              <span>Phone: (+005) 432 986 450</span>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              className="flex items-center gap-4 bg-gray-900 text-white p-4 rounded-xl shadow-md"
-            >
-              <MapPin className="w-6 h-6 text-red-400" />
-              <span>230 Norman Street, New York, H8R 1A1</span>
-            </motion.div>
-          </div>
         </motion.div>
-      </motion.div>
+
+        {/* Right: Profile + Contact Info */}
+        <motion.div
+  initial={{ x: 50, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="w-full md:w-1/2 flex flex-col items-center text-center gap-6"
+>
+  <div className="flex justify-center w-full">
+    <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-yellow-400 relative">
+      <img
+        src={profile}
+        alt="Contact Person"
+        className="w-full h-full object-cover transform transition duration-500 hover:scale-105"
+      />
+    </div>
+  </div>
+
+  <div className="space-y-4 w-full md:w-auto">
+    <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition">
+      <Mail className="w-6 h-6 text-purple-500" />
+      <span className="text-gray-700">techsupport@yourmail.com</span>
+    </div>
+    <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition">
+      <Phone className="w-6 h-6 text-purple-500" />
+      <span className="text-gray-700">(+91) 77 3929 5654</span>
+    </div>
+    <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition">
+      <MapPin className="w-6 h-6 text-purple-500" />
+      <span className="text-gray-700">Patna, Bihar, India</span>
+    </div>
+  </div>
+</motion.div>
+      </div>
     </section>
   );
 }
