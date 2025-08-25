@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Profile from "../assets/profile.jpg";
 export default function PortfolioCard({ title, img, link }) {
   return (
     <motion.a
@@ -11,7 +11,7 @@ export default function PortfolioCard({ title, img, link }) {
     >
       {/* Image */}
       <motion.img
-        src={img}
+        src={Profile}
         alt={title}
         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
       />

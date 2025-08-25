@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react"; // icons
-
+import Profile from "../assets/profile.jpg"; // profile image
 export default function About() {
   return (
     <section id="about" className="relative w-full bg-gradient-to-br from-purple-50 to-yellow-50 py-20 overflow-hidden">
@@ -19,7 +19,7 @@ export default function About() {
         >
           <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-yellow-400 relative">
             <img
-              src="/profile.jpg"
+              src={Profile}
               alt="Profile"
               className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
