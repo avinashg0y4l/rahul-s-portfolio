@@ -66,9 +66,11 @@ export default function About() {
           {/* Buttons + Socials */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
             <motion.a
-              href="http://localhost:5173/rahul_cv.pdf"
+              href="./rahul_cv.pdf"
               whileHover={{ scale: 1.05 }}
               className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-300 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download CV
             </motion.a>
