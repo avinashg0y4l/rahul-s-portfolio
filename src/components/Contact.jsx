@@ -29,41 +29,49 @@ export default function Contact() {
             Have questions or ideas? Let’s connect! Drop a message and I’ll respond within 24 hours.
           </p>
           <form className="flex flex-col gap-4">
-            <div className="flex gap-4">
-              <input
-                type="text"
-                placeholder="First name"
-                className="p-3 border rounded-lg flex-1 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Last name"
-                className="p-3 border rounded-lg flex-1 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                required
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="yourname@company.com"
-              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-              required
-            />
-            <textarea
-              placeholder="Type your message..."
-              rows="4"
-              className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-              required
-            ></textarea>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              type="submit"
-              className="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-300 transition"
-            >
-              Send Message
-            </motion.button>
-          </form>
+  {/* Name Fields */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input
+      type="text"
+      placeholder="First name"
+      className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Last name"
+      className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+      required
+    />
+  </div>
+
+  {/* Email */}
+  <input
+    type="email"
+    placeholder="yourname@company.com"
+    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+    required
+  />
+
+  {/* Message */}
+  <textarea
+    placeholder="Type your message..."
+    rows="4"
+    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+    required
+  ></textarea>
+
+  {/* Button */}
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    type="submit"
+    className="bg-yellow-400 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-300 transition"
+  >
+    Send Message
+  </motion.button>
+</form>
+
         </motion.div>
 
         {/* Right: Profile + Contact Info */}
