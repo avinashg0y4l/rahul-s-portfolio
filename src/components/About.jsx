@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react"; // icons
 import Profile from "../assets/profile.jpg"; // profile image
+
 export default function About() {
   return (
     <section id="about" className="relative w-full bg-gradient-to-br from-purple-50 to-yellow-50 py-20 overflow-hidden">
@@ -65,7 +66,7 @@ export default function About() {
           {/* Buttons + Socials */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
             <motion.a
-              href="#"
+              href="http://localhost:5173/rahul_cv.pdf"
               whileHover={{ scale: 1.05 }}
               className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-300 transition"
             >
