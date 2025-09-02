@@ -40,7 +40,7 @@ export default function About() {
             About <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            I’m a <span className="font-semibold text-yellow-500">Creative Designer</span> 
+            I’m a <span className="font-semibold text-yellow-500">Creative Designer </span> 
             who blends <span className="font-semibold">art & technology</span> to craft 
             stunning, interactive, and user-friendly designs. My vision is to turn 
             complex ideas into <span className="italic">simple & aesthetic visuals</span> 

@@ -5,14 +5,16 @@ import Hero from './components/Hero.jsx';
 import Contact from './components/Contact.jsx';
 import Navbar from './components/Navbar.jsx';
 import project1 from "./assets/project1.jpg";
+import project2 from "./assets/project2.jpeg";
 import { i, link } from "framer-motion/client";
 import Footer from "./components/Footer.jsx";
 import Services from "./components/Services.jsx";
+
 export default function App() {
   const projects = [
     { title: "Khelo India", img: project1, link:"https://www.linkedin.com/posts/rahul-raj-051017211_kheloindia2025-graphicdesigner-proudmoment-activity-7330683069974122496-FRVI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPGmcgBEOTYClP4Wl7Uaf659zNmwM7NqII"},
-    { title: "Design 2", img: "https://via.placeholder.com/300" },
-    { title: "Design 3", img: "https://via.placeholder.com/300" },
+    { title: "Design 2", img: project2, link:"https://www.linkedin.com/posts/rahul-raj-051017211_kheloindia2025-graphicdesigner-proudmoment-activity-7330683069974122496-FRVI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPGmcgBEOTYClP4Wl7Uaf659zNmwM7NqII"},
+    { title: "Design 3", img: "https://via.placeholder.com/300", link:"https://www.linkedin.com/posts/rahul-raj-051017211_kheloindia2025-graphicdesigner-proudmoment-activity-7330683069974122496-FRVI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPGmcgBEOTYClP4Wl7Uaf659zNmwM7NqII"},
   ];
 
   return (

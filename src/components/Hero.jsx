@@ -30,7 +30,7 @@ export default function Hero() {
             Hi, I’m <span className="text-yellow-300">Rahul</span>
           </h1>
           <p className="text-lg md:text-xl max-w-md">
-            A passionate <span className="font-semibold">Graphic Designer</span> 
+            A passionate <span className="font-semibold">Graphic Designer </span> 
             creating modern, interactive, and impactful designs that bring ideas to life.
           </p>
           <motion.button
