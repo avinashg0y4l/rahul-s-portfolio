@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      
       <Hero />
 
       {/* Wrap remaining sections in gradient */}
@@ -68,7 +68,7 @@ export default function App() {
         <Story />
 
         <Contact />
-        <Footer />
+      
       </div>
     </>
   );
