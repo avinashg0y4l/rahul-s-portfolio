@@ -113,6 +113,15 @@ export default function StoryGallery() {
             />
           ))}
         </div>
+        <button onClick={() => window.location.href = "/gallery"} className="
+  mt-8 mx-auto block px-6 py-2 
+  bg-gradient-to-r from-yellow-400  to-purple-500
+  text-white font-semibold rounded-full shadow-lg 
+  hover:scale-103 hover:brightness-110 transition 
+  duration-300
+">
+  View Full Gallery
+</button>
       </div>
     </section>
   );
