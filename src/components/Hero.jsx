@@ -33,7 +33,7 @@ export default function Hero() {
             A passionate <span className="font-semibold">Graphic Designer </span> 
             creating modern, interactive, and impactful designs that bring ideas to life.
           </p>
-          <motion.button
+          <motion.button onClick={() => window.location.href = "#projects"}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-4 px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-300 transition"
