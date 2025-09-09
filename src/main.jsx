@@ -1,15 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Navbar from './components/Navbar.jsx'
-import './index.css'
-import App from './App.jsx'
-import Footer from './components/Footer.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
-  
+// Components
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
+
+// Pages
+import App from "./App.jsx"; // home page
+import GalleryPage from "./pages/GalleryPage.jsx"; // dedicated gallery page
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Navbar />
-    <App />
-    <Footer />
-  </StrictMode>,
-)
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  </StrictMode>
+);

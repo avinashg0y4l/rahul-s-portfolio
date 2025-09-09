@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X, Calendar, Image as ImageIcon } from "lucide-react";
 
 export default function Navbar() {
   const [hidden, setHidden] = useState(false);
@@ -38,10 +38,13 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-8 text-gray-700 text-lg">
-        <a href="#home" className="hover:text-blue-600 transition">Home</a>
-        <a href="#about" className="hover:text-blue-600 transition">About</a>
-        <a href="#services" className="hover:text-blue-600 transition">Services</a>
-        <a href="#projects" className="hover:text-blue-600 transition">Projects</a>
+        <a href="/#home" className="hover:text-blue-600 transition">Home</a>
+        <a href="/#about" className="hover:text-blue-600 transition">About</a>
+        <a href="/#services" className="hover:text-blue-600 transition">Services</a>
+        <a href="/#projects" className="hover:text-blue-600 transition">Projects</a>
+        <a href="/gallery" className="hover:text-blue-600 transition flex items-center gap-1">
+          <ImageIcon size={18} /> Gallery
+        </a>
       </div>
 
       {/* Appointment */}
@@ -70,10 +73,13 @@ export default function Navbar() {
                      backdrop-blur-md rounded-2xl mt-2 p-4 flex flex-col 
                      gap-4 shadow-md md:hidden"
         >
-          <a href="#home" className="hover:text-blue-600 transition">Home</a>
-          <a href="#about" className="hover:text-blue-600 transition">About</a>
-          <a href="#services" className="hover:text-blue-600 transition">Services</a>
-          <a href="#projects" className="hover:text-blue-600 transition">Projects</a>
+          <a href="/#home" className="hover:text-blue-600 transition">Home</a>
+          <a href="/#about" className="hover:text-blue-600 transition">About</a>
+          <a href="/#services" className="hover:text-blue-600 transition">Services</a>
+          <a href="/#projects" className="hover:text-blue-600 transition">Projects</a>
+          <a href="/gallery" className="flex items-center gap-2 hover:text-blue-600 transition">
+            <ImageIcon size={18} /> Gallery
+          </a>
           <a href="#appointment" className="flex items-center gap-2 hover:text-blue-600 transition">
             <Calendar size={18} /> Appointment
           </a>
