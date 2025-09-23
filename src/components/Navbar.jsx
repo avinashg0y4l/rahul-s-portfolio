@@ -49,7 +49,7 @@ export default function Navbar() {
 
       {/* Appointment */}
       <a
-        href="#appointment"
+        href="#contact"
         className="hidden md:flex items-center gap-2 text-gray-800 
                    hover:text-blue-600 transition text-lg font-medium"
       >

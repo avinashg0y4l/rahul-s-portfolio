@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react"; // icons
 import Profile from "../assets/profile.jpg"; // profile image
+import { Figma, Image, Edit3, Layout, Feather, Camera } from "lucide-react"; // Added skill icons
+import {
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiAdobeaftereffects,
+  SiAdobepremierepro,
+  SiCoreldraw,
+  SiFigma,
+  SiAdobeindesign,
+  SiBlender,
+  SiCanva
+} from "react-icons/si";
 
 export default function About() {
   return (
@@ -49,19 +61,103 @@ export default function About() {
 
           {/* Skills */}
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Skills</h3>
-          <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
-            {["UI/UX Design", "Illustrations", "Brand Identity", "Photoshop", "Figma", "Motion Graphics"].map(
-              (skill, idx) => (
-                <motion.li
-                  key={idx}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white px-5 py-3 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition"
-                >
-                  {skill}
-                </motion.li>
-              )
-            )}
-          </ul>
+<ul className="grid grid-cols-5 md:grid-cols-9 gap-8 justify-items-center mt-6">
+  {/* Photoshop */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiAdobephotoshop
+      size={48}
+      style={{ fill: "url(#gradient)" }}
+    />
+  </motion.li>
+
+  {/* Illustrator */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiAdobeillustrator size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* After Effects */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiAdobeaftereffects size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* Premiere Pro */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiAdobepremierepro size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* CorelDRAW */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiCoreldraw size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* Figma */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiFigma size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* InDesign */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiAdobeindesign size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* Blender */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiBlender size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* Canva */}
+  <motion.li
+    whileHover={{ scale: 1.2 }}
+    className="relative w-16 h-16 flex items-center justify-center"
+  >
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-purple-500 opacity-20 blur-2xl animate-pulse -z-10"></div>
+    <SiCanva size={48} style={{ fill: "url(#gradient)" }} />
+  </motion.li>
+
+  {/* SVG Gradient Definition */}
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#FACC15" />
+        <stop offset="100%" stopColor="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+</ul>
+
+
 
           {/* Buttons + Socials */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">

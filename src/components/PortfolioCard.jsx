@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 
-export default function PortfolioCard({ title, img, link }) {
+export default function PortfolioCard({ title, img }) {
   return (
-    <motion.a
-      href={link || "#"}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       whileHover={{ scale: 1.05 }}
       className="relative block rounded-2xl overflow-hidden shadow-lg group cursor-pointer bg-white"
     >
@@ -28,8 +25,8 @@ export default function PortfolioCard({ title, img, link }) {
         <p className="mt-3 text-base font-light italic opacity-90">View Project</p>
       </motion.div>
 
-      {/* Accent Gradient Border (Matches About Theme) */}
+      {/* Accent Gradient Border */}
       <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500" />
-    </motion.a>
+    </motion.div>
   );
 }
