@@ -9,6 +9,7 @@ import img3 from "../assets/gallery/main3.jpg";
 import img4 from "../assets/gallery/1747156307026.jpg";
 import img5 from "../assets/gallery/1747771036406.jpg";
 import img6 from "../assets/gallery/1747771039557.jpg";
+import img7 from "../assets/project_gallery/Logo.png";
 
 // Gallery data with SEO info
 const galleryData = [
@@ -53,6 +54,13 @@ const galleryData = [
     date: "2024-08-15",
     event: "Independence Day",
     caption: "Photography retouching and compositing using Lightroom & Photoshop.",
+  },
+  {
+    src: img7,
+    title: "Logo Design",
+    date: "2024-07-10",
+    event: "Branding Workshop",
+    caption: "Logo design created for a local business rebranding project.",
   },
 ];
 
