@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rahul-s-portfolio-tau.vercel.app/sitemap.xml
