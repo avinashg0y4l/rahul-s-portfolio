@@ -4,8 +4,8 @@ import Profile from "../assets/profile.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
-      
+    <section id="home" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+
       {/* Gradient Background */}
       <div className="absolute inset-0 w-full h-full">
         <GradientBlinds
@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* Main Content Grid */}
       <div className="relative z-10 container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        
+
         {/* Left: Intro Text */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}
@@ -30,7 +30,7 @@ export default function Hero() {
             Hi, I’m <span className="text-yellow-300">Rahul</span>
           </h1>
           <p className="text-lg md:text-xl max-w-md">
-            A passionate <span className="font-semibold">Graphic Designer </span> 
+            A passionate <span className="font-semibold">Graphic Designer </span>
             creating modern, interactive, and impactful designs that bring ideas to life.
           </p>
           <motion.button onClick={() => window.location.href = "#projects"}
